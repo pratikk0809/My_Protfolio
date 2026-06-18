@@ -1,0 +1,100 @@
+.projects {
+  background: radial-gradient(circle at right center, rgba(0, 176, 155, 0.05) 0%, transparent 50%);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  padding: 0;
+}
+
+.card:hover {
+  box-shadow: 0 0 30px 5px rgba(0, 176, 155, 0.3);
+  transform: translateY(-8px);
+  border-color: rgba(0, 176, 155, 0.5);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.techBadge {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: var(--text-color);
+}
+
+.liveLink {
+  color: #00b09b;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-normal);
+  margin-top: auto;
+}
+
+.liveLink:hover {
+  color: #38ef7d;
+  transform: translateX(5px);
+}

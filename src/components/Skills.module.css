@@ -1,0 +1,103 @@
+.skills {
+  background: radial-gradient(circle at left center, rgba(56, 239, 125, 0.05) 0%, transparent 50%);
+}
+
+.containerGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 992px) {
+  .containerGrid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.card {
+  padding: 2.5rem;
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: 0 0 30px 5px rgba(56, 239, 125, 0.25);
+  transform: translateY(-8px);
+  border-color: rgba(56, 239, 125, 0.4);
+}
+
+.sideCards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 0.8rem;
+}
+
+.skillsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.groupTitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all var(--transition-normal);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.tag:hover {
+  background: rgba(56, 239, 125, 0.1);
+  border-color: rgba(56, 239, 125, 0.5);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.listItem h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #f0f0f0;
+}
+
+.listItem p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.listItem p span {
+  font-size: 0.85rem;
+  color: #38ef7d;
+  font-weight: 600;
+}

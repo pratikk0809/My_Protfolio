@@ -1,0 +1,18 @@
+.about {
+  position: relative;
+}
+
+.content {
+  padding: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.text p:last-child {
+  margin-bottom: 0;
+}

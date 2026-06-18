@@ -1,0 +1,77 @@
+.contact {
+  position: relative;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+}
+
+.formContainer {
+  padding: 4rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.inputGroup label {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--card-border);
+  border-radius: 5px;
+  padding: 1.2rem;
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  transition: all var(--transition-normal);
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+  outline: none;
+  border-color: #00f2fe;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.submitBtn {
+  background: var(--gradient-secondary);
+  color: #fff;
+  border: none;
+  padding: 1.2rem;
+  border-radius: 5px;
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-top: 1rem;
+}
+
+.submitBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 242, 254, 0.5);
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 2.5rem 1.5rem;
+  }
+}
