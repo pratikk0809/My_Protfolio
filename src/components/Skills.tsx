@@ -6,6 +6,7 @@ export default function Skills() {
     { category: "Concepts", skills: ["Data Structure and Algorithms", "Object Oriented Programming", "DBMS"] },
     { category: "Web Technologies", skills: ["React.js", "Node.js", "Express.js", "MongoDB", "PostgreSQL"] },
     { category: "Development Tools", skills: ["GitHub", "Postman"] },
+    { category: "AI/ML & LLM Tools", skills: ["Python", "LangChain","ChromaDB","Groq API", "HuggingFace Embeddings"] },
     { category: "Cloud & Deployment", skills: ["Render", "Cloudinary", "Neon Database"] }
   ];
 
