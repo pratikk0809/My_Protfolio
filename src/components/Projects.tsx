@@ -17,18 +17,18 @@ export default function Projects() {
       image: "/prescripto.png"
     },
     {
+      title: "Multi Source RAG Chatbot",
+      description: "Built a Retrieval-Augmented Generation (RAG) chatbot in Python using LangChain, ingesting and processing 3 document source types (PDF, TXT, web URLs)",
+      tech: ["Python", "LangChain","ChromaDB","Groq API", "HuggingFace Embeddings"],
+      link: "https://github.com/pratikk0809/Multi-source-RAG-chatbot",
+      image: "/chainbot.png"
+    },
+    {
       title: "YelpCamp",
       description: " Built a full-featured campground discovery platform with CRUD operations, interactive geolocation maps, and marker clustering via MapTiler API.",
       tech: ["Node.js", "EJS","MapTiler API","MongoDB"],
       link: "https://yelp-camp-1-kjx8.onrender.com/",
       image: "/yelpcamp.png"
-    },
-    {
-      title: "Multi Source RAG Chatbot",
-      description: "Built a Retrieval-Augmented Generation (RAG) chatbot in Python using LangChain, ingesting and processing 3 document source types (PDF, TXT, web URLs)",
-      tech: ["Python", "LangChain","ChromaDB","Groq API", "HuggingFace Embeddings"],
-      link: "https://github.com/pratikk0809/Multi-source-RAG-chatbot",
-      image: "/chatbot.png"
     }
   ];
 
