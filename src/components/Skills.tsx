@@ -2,12 +2,12 @@ import styles from './Skills.module.css';
 
 export default function Skills() {
   const skillsData = [
-    { category: "Programming Languages", skills: ["C++", "JavaScript", "SQL"] },
+    { category: "Programming Languages", skills: ["C++", "Python", "JavaScript", "SQL"] },
     { category: "Concepts", skills: ["Data Structure and Algorithms", "Object Oriented Programming", "DBMS"] },
-    { category: "Web Technologies", skills: ["React.js", "Node.js", "Express.js", "MongoDB", "PostgreSQL"] },
+    { category: "Web Technologies", skills: ["React", "Node.js", "Express", "MongoDB", "PostgreSQL", "FastAPI"] },
     { category: "Development Tools", skills: ["GitHub", "Postman"] },
-    { category: "AI/ML & LLM Tools", skills: ["Python", "LangChain","ChromaDB","Groq API", "HuggingFace Embeddings"] },
-    { category: "Cloud & Deployment", skills: ["Render", "Cloudinary", "Neon Database"] }
+    { category: "AI Tools", skills: ["Claude Code", "LangChain", "Vector Database", "Embeddings"] },
+    { category: "Cloud & Deployment", skills: ["Render", "Cloudinary", "Neon Database", "Docker"] }
   ];
 
   const education = [
