@@ -12,14 +12,14 @@ export default function Contact() {
       {/* Centered CTA block */}
       <div className={styles.center}>
         <h2 className={styles.heading}>
-          Let&apos;s Build
+          Let&apos;s Work
           <br />
-          The Future
+          Together
         </h2>
 
         <a
           id="contact-email"
-          href="mailto:pratikk0809@gmail.com"
+          href="mailto:pratikkbirla@gmail.com"
           className={styles.email}
           aria-label="Send email to Pratik Birla"
         >
