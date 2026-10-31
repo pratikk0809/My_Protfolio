@@ -1,55 +1,27 @@
+/* ─── Footer ─────────────────────────────────────────────────────── */
 .footer {
-  background: var(--bg-color);
-  border-top: 1px solid var(--card-border);
-  padding: 4rem 0 2rem;
-  margin-top: 4rem;
-}
-
-.content {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  padding: 1.25rem 3rem;
+  border-top: 1px solid var(--border);
 }
 
-.brand {
-  flex: 1;
-  min-width: 250px;
+.copy {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
 }
 
-.brand span {
-  font-size: 1.5rem;
-  font-weight: 800;
-  display: block;
-  margin-bottom: 0.5rem;
+.status {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
 }
 
-.tagline {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-}
-
-.links, .social {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.links a, .social a {
-  color: var(--text-muted);
-  transition: color var(--transition-normal);
-  font-weight: 500;
-}
-
-.links a:hover, .social a:hover {
-  color: var(--text-color);
-}
-
-.copyright {
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 1.5rem;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.85rem;
+.operational {
+  color: var(--green);
+  font-weight: 700;
 }

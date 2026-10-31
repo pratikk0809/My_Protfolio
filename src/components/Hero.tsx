@@ -1,29 +1,45 @@
-import styles from './Hero.module.css';
+import styles from "./Hero.module.css";
 
 export default function Hero() {
   return (
-    <section id="home" className={`section ${styles.hero}`}>
-      <div className="container">
-        <div className={`${styles.content} animate-fade-in`}>
-          <h2 className={styles.greeting}>Hello, I'm</h2>
-          <h1 className={styles.title}>
-            <span className="text-gradient">Pratik Birla</span>
-          </h1>
-          <h3 className={`${styles.subtitle} animate-fade-in delay-1`}>
-            Software Engineer
-          </h3>
-          <p className={`${styles.description} animate-fade-in delay-2`}>
-            I build dynamic, beautiful, and highly scalable web applications. Let's create something amazing together.
-          </p>
-          <div className={`${styles.actions} animate-fade-in delay-3`}>
-            <a href="#projects" className={styles.primaryBtn}>
-              View My Work
-            </a>
-            <a href="#contact" className={styles.secondaryBtn}>
-              Contact Me
-            </a>
-          </div>
+    <section id="home" className={styles.hero}>
+      {/* Background radial glow */}
+      <div className={styles.glow} aria-hidden="true" />
+
+      {/* Main centered content block */}
+      <div className={styles.content}>
+        {/* Status badge */}
+        <div className={styles.badge}>
+          <span className={styles.badgeDot} />
+          ONLINE&nbsp;&nbsp;·&nbsp;&nbsp;INDORE
         </div>
+
+        {/* Massive name */}
+        <div className={styles.nameWrap}>
+          <h1 className={styles.name}>
+            <span className={styles.nameFirst}>PRATIK</span>
+            <span className={styles.nameLast}>BIRLA</span>
+          </h1>
+        </div>
+
+        {/* Role + Bio row */}
+        <div className={styles.meta}>
+          <span className={styles.role}>// SOFTWARE ENGINEER</span>
+          <div className={styles.metaDivider} />
+          <p className={styles.bio}>
+            Building <strong>scalable web apps</strong> and AI-powered tools.
+            <br />
+            Full-stack developer focused on clean
+            <br />
+            architecture and modern experiences.
+          </p>
+        </div>
+      </div>
+
+      {/* Scroll cue — natural bottom of flex, never overlaps content */}
+      <div className={styles.scrollCue} aria-hidden="true">
+        <span className={styles.scrollLabel}>SCROLL</span>
+        <div className={styles.scrollLine} />
       </div>
     </section>
   );

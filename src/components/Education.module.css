@@ -1,0 +1,124 @@
+/* ─── Education Section ──────────────────────────────────────────── */
+.education {
+  padding-bottom: 7rem;
+}
+
+/* ── Single card ── */
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2.25rem 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-card);
+  transition: border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient glow layer */
+.card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 120% at 0% 50%,
+    rgba(181, 232, 83, 0.07) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.card:hover {
+  border-color: rgba(181, 232, 83, 0.22);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+/* ── Left block ── */
+.left {
+  flex: 1;
+}
+
+.degree {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.55rem;
+  line-height: 1.2;
+}
+
+.institution {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+/* ── Right stats block ── */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.divider {
+  width: 1px;
+  height: 2.5rem;
+  background: var(--border-light);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.statValue {
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--green);
+  line-height: 1;
+}
+
+.statSub {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.statLabel {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+

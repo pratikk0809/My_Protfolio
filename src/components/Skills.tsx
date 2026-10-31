@@ -1,74 +1,82 @@
-import styles from './Skills.module.css';
+import styles from "./Skills.module.css";
+
+const skillGroups = [
+  {
+    category: "Programming Languages",
+    skills: ["C++", "Python", "JavaScript", "SQL"],
+  },
+  {
+    category: "Web Technologies",
+    skills: ["React", "Node.js", "Express", "MongoDB", "PostgreSQL", "FastAPI"],
+  },
+  {
+    category: "AI / ML Tools",
+    skills: ["Claude Code", "LangChain", "ChromaDB", "Vector Database", "Embeddings", "Groq API"],
+  },
+  {
+    category: "Core Concepts",
+    skills: ["Data Structures & Algorithms", "Object-Oriented Programming", "DBMS"],
+  },
+  {
+    category: "Development Tools",
+    skills: ["GitHub", "Postman", "Docker"],
+  },
+  {
+    category: "Cloud & Deployment",
+    skills: ["Render", "Cloudinary", "Neon Database", "Vercel"],
+  },
+];
+
+const certifications = [
+  {
+    title: "Oracle Cloud Infrastructure AI Foundations Associate",
+    issuer: "Oracle",
+    year: "2024",
+  },
+  {
+    title: "Full Stack Web Development Bootcamp",
+    issuer: "Udemy",
+    year: "2023",
+  },
+];
 
 export default function Skills() {
-  const skillsData = [
-    { category: "Programming Languages", skills: ["C++", "Python", "JavaScript", "SQL"] },
-    { category: "Concepts", skills: ["Data Structure and Algorithms", "Object Oriented Programming", "DBMS"] },
-    { category: "Web Technologies", skills: ["React", "Node.js", "Express", "MongoDB", "PostgreSQL", "FastAPI"] },
-    { category: "Development Tools", skills: ["GitHub", "Postman"] },
-    { category: "AI Tools", skills: ["Claude Code", "LangChain", "Vector Database", "Embeddings"] },
-    { category: "Cloud & Deployment", skills: ["Render", "Cloudinary", "Neon Database", "Docker"] }
-  ];
-
-  const education = [
-    { degree: "B.E. Electronics and Telecommunications", school: "Institute of Engineering and Technology, DAVV, Indore", cgpa:"CGPA - 8.0", year: "2022 - 2026" },
-  ];
-
-  const certifications = [
-    { title: "Oracle Cloud Infrastructure AI Foundations Associate", issuer: "Oracle" },
-    { title: "Full Stack Web Development Bootcamp", issuer: "Udemy" },
-  ];
-
   return (
-    <section id="skills" className={`section ${styles.skills}`}>
+    <section id="skills" className={styles.skills}>
+      {/* Section label bar */}
+      <div className="section-bar">
+        <span className="section-bar__label">02 / SKILL ARSENAL</span>
+        <div className="section-bar__line" />
+      </div>
+
       <div className="container">
-        <h2 className="section-title">
-          My <span className="text-gradient">Experience</span>
-        </h2>
-        <div className={styles.containerGrid}>
-          
-          <div className={`glass ${styles.card} ${styles.skillsCard}`}>
-            <h3 className={styles.cardTitle}>Skills Summary</h3>
-            <div className={styles.skillsWrapper}>
-              {skillsData.map((group, index) => (
-                <div key={index} className={styles.skillGroup}>
-                  <h4 className={styles.groupTitle}>{group.category}</h4>
-                  <div className={styles.skillTags}>
-                    {group.skills.map((skill, i) => (
-                      <span key={i} className={styles.tag}>{skill}</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className={styles.sideCards}>
-            <div className={`glass ${styles.card}`}>
-              <h3 className={styles.cardTitle}>Education</h3>
-              <ul className={styles.list}>
-                {education.map((edu, index) => (
-                  <li key={index} className={styles.listItem}>
-                    <h4>{edu.degree}</h4>
-                    <p>{edu.school}<span>{edu.cgpa}</span> <span>{edu.year}</span></p>
-                  </li>
+        {/* Skill categories grid */}
+        <div className={styles.grid}>
+          {skillGroups.map((group, i) => (
+            <div key={i} className={styles.category}>
+              <p className={styles.categoryLabel}>{group.category}</p>
+              <div className={styles.tags}>
+                {group.skills.map((skill, j) => (
+                  <span key={j} className={styles.tag}>{skill}</span>
                 ))}
-              </ul>
+              </div>
             </div>
+          ))}
+        </div>
 
-            <div className={`glass ${styles.card}`}>
-              <h3 className={styles.cardTitle}>Certifications</h3>
-              <ul className={styles.list}>
-                {certifications.map((cert, index) => (
-                  <li key={index} className={styles.listItem}>
-                    <h4>{cert.title}</h4>
-                    <p>{cert.issuer}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        {/* Certifications */}
+        <div className={styles.certSection}>
+          <p className={styles.certHeading}>Certifications</p>
+          <div className={styles.certGrid}>
+            {certifications.map((cert, i) => (
+              <div key={i} className={styles.certCard}>
+                <p className={styles.certTitle}>{cert.title}</p>
+                <p className={styles.certMeta}>
+                  {cert.issuer}&nbsp;&nbsp;·&nbsp;&nbsp;{cert.year}
+                </p>
+              </div>
+            ))}
           </div>
-
         </div>
       </div>
     </section>

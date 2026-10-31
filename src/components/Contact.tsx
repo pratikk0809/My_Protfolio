@@ -1,33 +1,30 @@
-import styles from './Contact.module.css';
+import styles from "./Contact.module.css";
 
 export default function Contact() {
   return (
-    <section id="contact" className={`section ${styles.contact}`}>
-      <div className="container">
-        <h2 className="section-title">
-          Get In <span className="text-gradient-secondary">Touch</span>
+    <section id="contact" className={styles.contact}>
+      {/* Section label bar */}
+      <div className="section-bar">
+        <span className="section-bar__label">04 / INITIALIZATION</span>
+        <div className="section-bar__line" />
+      </div>
+
+      {/* Centered CTA block */}
+      <div className={styles.center}>
+        <h2 className={styles.heading}>
+          Let&apos;s Build
+          <br />
+          The Future
         </h2>
-        <div className={styles.content}>
-          <div className={`glass ${styles.formContainer}`}>
-            <form action="https://formspree.io/f/xbdebrzn" method="POST" className={styles.form}>
-              <div className={styles.inputGroup}>
-                <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required />
-              </div>
-              <div className={styles.inputGroup}>
-                <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required />
-              </div>
-              <div className={styles.inputGroup}>
-                <label htmlFor="message">Message</label>
-                <textarea id="message" name="message" rows={5} placeholder="Hello..." required></textarea>
-              </div>
-              <button type="submit" className={styles.submitBtn}>
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
+
+        <a
+          id="contact-email"
+          href="mailto:pratikk0809@gmail.com"
+          className={styles.email}
+          aria-label="Send email to Pratik Birla"
+        >
+          pratikk0809@gmail.com
+        </a>
       </div>
     </section>
   );
